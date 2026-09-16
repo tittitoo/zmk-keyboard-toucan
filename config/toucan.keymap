@@ -85,6 +85,11 @@
             #binding-cells = <0>;
             bindings = <&kp LC(B) &kp N9>;
         };
+        tmux_shift_t: tmux_shift_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp LS(T)>;
+        };
     };
 
     conditional_layers {
@@ -140,7 +145,7 @@
         tmux {
             display-name = "TMUX";
             bindings = <
-                &trans &tmux_1 &tmux_2 &tmux_3 &tmux_4 &tmux_5   &tmux_6 &tmux_7 &tmux_8 &tmux_9 &trans &trans
+                &tmux_shift_t &tmux_1 &tmux_2 &tmux_3 &tmux_4 &tmux_5   &tmux_6 &tmux_7 &tmux_8 &tmux_9 &trans &trans
                 &trans &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans &trans
                 &trans &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans &trans
                                        &trans  &trans  &trans    &trans  &trans  &trans
