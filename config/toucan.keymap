@@ -7,6 +7,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define TMUX 4
 
 / {
     behaviors {
@@ -35,6 +36,54 @@
         };
     };
 
+    macros {
+        tmux_1: tmux_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N1>;
+        };
+        tmux_2: tmux_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N2>;
+        };
+        tmux_3: tmux_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N3>;
+        };
+        tmux_4: tmux_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N4>;
+        };
+        tmux_5: tmux_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N5>;
+        };
+        tmux_6: tmux_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N6>;
+        };
+        tmux_7: tmux_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N7>;
+        };
+        tmux_8: tmux_8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N8>;
+        };
+        tmux_9: tmux_9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N9>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -50,7 +99,7 @@
             display-name = "BASE";
             bindings = <
                 &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp ESC   &hml LSHFT A &hml LALT S &hml LGUI D &hml LCTRL F &kp G   &kp H &hmr RCTRL J  &hmr RGUI K     &hmr RALT L   &hmr RSHFT SEMI &kp SQT
+                &kp ESC   &hml LSHFT A &hml LALT S &hml LGUI D &hml LCTRL F &lt TMUX G   &lt TMUX H &hmr RCTRL J  &hmr RGUI K     &hmr RALT L   &hmr RSHFT SEMI &kp SQT
                 &kp CAPS &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                                 &kp LGUI &lt 1 SPACE &kp ESC   &kp BSPC &lt 2 SPACE &kp RALT
             >;
@@ -85,8 +134,14 @@
                                    &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
             >;
         };
-        extra_1 {
-                status = "reserved";
+        tmux {
+            display-name = "TMUX";
+            bindings = <
+                &trans &tmux_1 &tmux_2 &tmux_3 &tmux_4 &tmux_5   &tmux_6 &tmux_7 &tmux_8 &tmux_9 &trans &trans
+                &trans &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans &trans
+                &trans &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans &trans
+                                       &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
 
         extra_2 {
