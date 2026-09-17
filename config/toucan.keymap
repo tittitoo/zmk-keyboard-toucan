@@ -166,7 +166,7 @@
             display-name = "MOU";
             bindings = <
                 &trans &trans &trans &trans &mkp MCLK &trans   &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &mkp RCLK &mkp LCLK &mo NAV   &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &mkp RCLK &mkp LCLK &mo NAV   &kp LC(LG(SPACE)) &kp LC(LG(N0)) &kp LC(LG(MINUS)) &trans &trans &trans
                 &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
                               &trans &trans &trans   &trans &trans &trans
             >;
