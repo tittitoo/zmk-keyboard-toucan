@@ -92,6 +92,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_adj {
+            timeout-ms = <100>;
+            key-positions = <37 40>;
+            bindings = <&mo ADJ>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -109,7 +118,7 @@
                 &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
                 &kp ESC   &hml LSHFT A &hml LALT S &hml LGUI D &hml LCTRL F &lt NAV G   &lt NAV H &hmr RCTRL J  &hmr RGUI K     &hmr RALT L   &hmr RSHFT SEMI &kp SQT
                 &kp CAPS &kp Z &kp X &kp C &kp V &lt WALK B   &lt WALK N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                &lt BLE LGUI &lt 2 RET &lt MOU ESC   &kp BSPC &lt 2 SPACE &mo ADJ
+                                &lt BLE LGUI &lt 2 RET &lt MOU ESC   &kp BSPC &lt 2 SPACE &kp RALT
             >;
         };
 
