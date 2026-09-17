@@ -148,7 +148,7 @@
                 &tmux_shift_t &tmux_1 &tmux_2 &tmux_3 &tmux_4 &tmux_5   &tmux_6 &tmux_7 &tmux_8 &tmux_9 &trans &trans
                 &trans &trans  &trans  &trans  &trans  &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT  &trans &trans
                 &trans &kp LA(N1) &kp LA(N2) &kp LA(N3) &kp LA(N4) &kp LA(N5)   &kp LA(N6) &kp LA(N7) &kp LA(N8) &kp LA(N9) &kp LA(N0) &trans
-                                       &trans  &trans  &trans    &trans  &trans  &trans
+                                       &kp LALT  &kp LGUI  &kp LCTRL    &trans  &trans  &trans
             >;
         };
 
