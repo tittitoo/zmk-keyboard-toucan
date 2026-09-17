@@ -93,7 +93,7 @@
         bp85: bp85 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp B &kp P &kp N8 &kp N5 &kp RET>;
+            bindings = <&kp LS(B) &kp LS(P) &kp N8 &kp N5 &kp RET>;
         };
     };
 
