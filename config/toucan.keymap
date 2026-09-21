@@ -10,8 +10,8 @@
 #define ADJ  3
 #define NAV  4
 #define WALK 5
-#define MOU  6
-#define PAGE 7
+#define MOU  7
+#define PAGE 6
 
 / {
     behaviors {
