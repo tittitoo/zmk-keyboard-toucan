@@ -12,6 +12,7 @@
 #define WALK 5
 #define MOU  7
 #define PAGE 6
+#define MOD  8
 
 / {
     behaviors {
@@ -107,7 +108,7 @@
                 &kp TAB   &kp Q &kp W &kp E &kp R &lt PAGE T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
                 &kp ESC   &hml LSHFT A &hml LALT S &hml LGUI D &hml LCTRL F &lt NAV G   &lt NAV H &hmr RCTRL J  &hmr RGUI K     &hmr RALT L   &hmr RSHFT SEMI &kp SQT
                 &kp CAPS &kp Z &kp X &kp C &lt ADJ V &lt WALK B   &lt WALK N &lt ADJ M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                &lt BLE LGUI &lt 2 RET &lt MOU ESC   &kp BSPC &lt 2 SPACE &kp RALT
+                                &lt BLE LGUI &lt 2 RET &lt MOU ESC   &kp BSPC &lt 2 SPACE &mo MOD
             >;
         };
 
@@ -126,8 +127,8 @@
             bindings = <
                 &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR  &kp PRCNT   &kp N7 &kp N8 &kp N9          &kp MINUS &kp UNDER &kp TILDE
                 &kp TAB   &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR   &kp N4 &kp N5 &kp N6 &kp PLUS  &kp N0    &kp PIPE
-                &kp LGUI  &kp LCTRL &kp LBKT &kp RBKT &kp LBRC &kp RBRC   &kp N1 &kp N2 &kp N3         &kp DOT   &kp EQUAL &kp GRAVE
-                                          &kp LGUI &trans   &kp SPACE   &kp BSPC   &trans    &kp RALT
+                &kp LSHFT &kp LALT &kp LBKT &kp RBKT &kp LBRC &kp RBRC   &kp N1 &kp N2 &kp N3         &kp DOT   &kp EQUAL &kp GRAVE
+                                          &kp LGUI &trans   &kp LCTRL   &kp BSPC   &trans    &kp RALT
             >;
         };
 
@@ -177,6 +178,16 @@
                 &trans &trans &trans &mkp RCLK &mkp LCLK &mo BLE   &mkp SCRL_LEFT &mkp SCRL_DOWN &mkp SCRL_UP &mkp SCRL_RIGHT &trans &trans
                 &trans &trans &trans &trans &trans &trans   &trans &kp N0 &kp MINUS &kp PLUS &kp EQUAL &trans
                               &kp LALT &kp LGUI &trans   &kp RCTRL &kp RGUI &kp RALT
+            >;
+        };
+
+        mod {
+            display-name = "MOD";
+            bindings = <
+                &kp TAB &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
+                &trans &hml LSHFT A &hml LALT S &hml LGUI D &hml LCTRL F &trans   &trans &hmr RCTRL J &hmr RGUI K &hmr RALT L &hmr RSHFT SEMI &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                                       &kp LALT  &kp LGUI  &kp LCTRL    &kp RCTRL  &kp RGUI  &trans
             >;
         };
     };
