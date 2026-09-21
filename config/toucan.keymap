@@ -11,6 +11,7 @@
 #define NAV  4
 #define WALK 5
 #define MOU  6
+#define PAGE 7
 
 / {
     behaviors {
@@ -103,7 +104,7 @@
         base {
             display-name = "BASE";
             bindings = <
-                &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
+                &kp TAB   &kp Q &kp W &kp E &kp R &lt PAGE T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp DEL
                 &kp ESC   &hml LSHFT A &hml LALT S &hml LGUI D &hml LCTRL F &lt NAV G   &lt NAV H &hmr RCTRL J  &hmr RGUI K     &hmr RALT L   &hmr RSHFT SEMI &kp SQT
                 &kp CAPS &kp Z &kp X &kp C &lt ADJ V &lt WALK B   &lt WALK N &lt ADJ M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                                 &lt BLE LGUI &lt 2 RET &lt MOU ESC   &kp BSPC &lt 2 SPACE &kp RALT
@@ -156,6 +157,16 @@
                 &tmux_shift_t &tmux_1 &tmux_2 &tmux_3 &tmux_4 &tmux_5   &tmux_6 &tmux_7 &tmux_8 &tmux_9 &trans &bp85
                 &kp LG(LC(N1)) &kp LG(LC(N2)) &kp LG(LC(N3)) &kp LG(LC(N4)) &kp LG(LC(N5)) &trans   &trans &kp LG(LC(N6)) &kp LG(LC(N7)) &kp LG(LC(N8)) &kp LG(LC(N9)) &kp LG(LC(N0))
                                              &trans     &trans     &trans       &trans     &trans     &trans
+            >;
+        };
+
+        page {
+            display-name = "PAGE";
+            bindings = <
+                &trans &trans &trans &trans &trans &trans   &kp INS &kp K_APP &kp SLCK &kp PAUSE_BREAK &kp KP_NUM &trans
+                &trans &trans &trans &trans &trans &trans    &kp HOME &kp PG_DN &kp PG_UP &kp END  &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                                       &kp LALT  &kp LGUI  &kp LCTRL    &kp RCTRL  &kp RGUI  &kp RALT
             >;
         };
 
